@@ -22,6 +22,13 @@ const router = createBrowserRouter([
       {
         path: '/',
         loader:()=>fetch('http://localhost:5000/productsCount'),
+      //   loader:({ request }) => {
+      //     const url = new URL(request.url);
+      //     const page = url.searchParams.get("page") || 1; // Default page = 1
+      //     const limit = url.searchParams.get("limit") || 10; // Default limit = 10
+      
+      //     return fetch(`http://localhost:5000/products?page=${page}&limit=${limit}`);
+      // },
         element: <Shop></Shop>
       },
       {
